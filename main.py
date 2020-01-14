@@ -73,6 +73,9 @@ def ignore_tags_image(image,running_sha):
             return True
         if (re.compile(FILTER_TAGS_REGEX).search(tag) is not None):
             skip=False
+        else:
+            skip=True
+
     return skip
 
 
